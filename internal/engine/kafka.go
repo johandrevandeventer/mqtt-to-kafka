@@ -45,6 +45,7 @@ func (e *Engine) startKafkaProducer() {
 	// Register Kafka topics
 	dispatcherInstance.RegisterKafkaTopic("Rubicon/DSE", "rubicon_kafka_dse")
 	dispatcherInstance.RegisterKafkaTopic("Rubicon/Lora", "rubicon_kafka_lora")
+	dispatcherInstance.RegisterKafkaTopic("Rubicon/mqtt", "rubicon_kafka_mqtt")
 
 	// Start dispatcher
 	dispatcherInstance.Start(mqttclient.GetMessageChannel())
