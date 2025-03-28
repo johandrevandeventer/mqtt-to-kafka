@@ -7,6 +7,7 @@ import (
 
 	mqtt "github.com/eclipse/paho.mqtt.golang"
 	"github.com/johandrevandeventer/kafkaclient/payload"
+	"github.com/johandrevandeventer/mqtt-to-kafka/internal/flags"
 	"go.uber.org/zap"
 )
 
@@ -29,6 +30,10 @@ func NewDispatcher(producer Producer, logger *zap.Logger) *Dispatcher {
 }
 
 func (d *Dispatcher) RegisterKafkaTopic(topicPrefix, kafkaTopic string) {
+	if flags.FlagEnvironment == "development" {
+		kafkaTopic = fmt.Sprintf("%s_%s", kafkaTopic, flags.FlagEnvironment)
+	}
+
 	d.topics[topicPrefix] = kafkaTopic
 	d.logger.Debug("Registered Kafka topic", zap.String("topicPrefix", topicPrefix), zap.String("kafkaTopic", kafkaTopic))
 }
