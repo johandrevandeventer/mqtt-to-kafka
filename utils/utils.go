@@ -5,6 +5,7 @@ import (
 	"os"
 	"path/filepath"
 
+	"github.com/google/uuid"
 	"github.com/johandrevandeventer/mqtt-to-kafka/internal/flags"
 	"gopkg.in/yaml.v3"
 )
@@ -167,4 +168,9 @@ func WriteToLogFile(path string, message string) error {
 	}
 
 	return nil
+}
+
+// GenerateUUID generates a new UUID
+func GenerateUUID() uuid.UUID {
+	return uuid.New()
 }
