@@ -4,7 +4,7 @@ go 1.22.2
 
 require (
 	github.com/eclipse/paho.mqtt.golang v1.5.0
-	github.com/johandrevandeventer/kafkaclient v1.3.1
+	github.com/johandrevandeventer/kafkaclient v1.4.0
 	github.com/johandrevandeventer/logging v1.0.0
 	github.com/johandrevandeventer/mqttclient v1.0.3
 	github.com/johandrevandeventer/persist v1.0.0
