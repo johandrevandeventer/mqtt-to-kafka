@@ -8,6 +8,7 @@ import (
 	mqtt "github.com/eclipse/paho.mqtt.golang"
 	"github.com/johandrevandeventer/kafkaclient/payload"
 	"github.com/johandrevandeventer/mqtt-to-kafka/internal/flags"
+	coreutils "github.com/johandrevandeventer/mqtt-to-kafka/utils"
 	"go.uber.org/zap"
 )
 
@@ -52,6 +53,7 @@ func (d *Dispatcher) dispatch(msg mqtt.Message) {
 	for topicPrefix, kafkaTopic := range d.topics {
 		if len(msg.Topic()) >= len(topicPrefix) && msg.Topic()[:len(topicPrefix)] == topicPrefix {
 			message := payload.Payload{
+				ID:               coreutils.GenerateUUID(),
 				MqttTopic:        msg.Topic(),
 				Message:          msg.Payload(),
 				MessageTimestamp: time.Now(),
