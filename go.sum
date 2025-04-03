@@ -163,8 +163,6 @@ github.com/in-toto/in-toto-golang v0.5.0 h1:hb8bgwr0M2hGdDsLjkJ3ZqJ8JFLL/tgYdAxF
 github.com/in-toto/in-toto-golang v0.5.0/go.mod h1:/Rq0IZHLV7Ku5gielPT4wPHJfH1GdHMCq8+WPxw8/BE=
 github.com/inconshreveable/mousetrap v1.1.0 h1:wN+x4NVGpMsO7ErUn/mUI3vEoE6Jt13X2s0bqwp9tc8=
 github.com/inconshreveable/mousetrap v1.1.0/go.mod h1:vpF70FUmC8bwa3OWnCshd2FqLfsEA9PFc4w1p2J65bw=
-github.com/johandrevandeventer/kafkaclient v1.4.0 h1:vdBJTTL4yQ7pzLWtVDMj4ub49buIF1E3WLlJt2ryFFc=
-github.com/johandrevandeventer/kafkaclient v1.4.0/go.mod h1:WHEDODyj24gGKoRXWzTnVwwjR8CwzwxtogyhfxbAZ40=
 github.com/johandrevandeventer/kafkaclient v1.5.0 h1:Grv2NV1WJ1FLIz2PyS8l2ZvVwcdBx3Y36wOvR1AIJXM=
 github.com/johandrevandeventer/kafkaclient v1.5.0/go.mod h1:WHEDODyj24gGKoRXWzTnVwwjR8CwzwxtogyhfxbAZ40=
 github.com/johandrevandeventer/logging v1.0.0 h1:1vmQNXFLy2cd5mNLHPr+Tz00gThPJsj2nnIpGu2D4KA=
